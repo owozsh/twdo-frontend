@@ -11,11 +11,7 @@ interface TasksState {
   stopEditingTask: () => void;
   updateTasks: () => Promise<void>;
   addTask: (project?: number) => Promise<void>;
-  changeTaskDescription: (
-    taskID: string,
-    description: string,
-    projectId: number | null
-  ) => void;
+  changeTaskDescription: (taskID: string, description: string) => void;
   isDraggingTask: boolean;
   setIsDraggingTask: (isDraggingTask: boolean) => void;
   removeTask: (id: string) => Promise<void>;
