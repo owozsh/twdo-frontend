@@ -23,18 +23,21 @@ export default function SignUp({ code }: { code?: string }) {
 
   const handleSignUp = async (data: SignUpFormType | any) => {
     if (data.password === data.passwordConfirmation) {
-      await fetch("http://localhost:4001/users/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email,
-          password: data.password,
-          wasCreatedWithOAuth: false,
-        }),
-      });
+      await fetch(
+        "http://ec2-54-85-186-11.compute-1.amazonaws.com:4001/users/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: data.name,
+            email: data.email,
+            password: data.password,
+            wasCreatedWithOAuth: false,
+          }),
+        }
+      );
     }
   };
 
