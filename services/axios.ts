@@ -5,7 +5,7 @@ export function getAPIClient(ctx?: any) {
   const { "twdo.token": token } = parseCookies(ctx);
 
   const api = axios.create({
-    baseURL: "http://ec2-54-85-186-11.compute-1.amazonaws.com:4001",
+    baseURL: "https://ec2-3-84-11-182.compute-1.amazonaws.com:4001",
   });
 
   if (token) {

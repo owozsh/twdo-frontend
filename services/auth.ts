@@ -2,7 +2,7 @@ import { SignInData } from "../types/auth";
 
 export async function signInRequest(data: SignInData) {
   return fetch(
-    "http://ec2-54-85-186-11.compute-1.amazonaws.com:4001/users/signIn",
+    "https://ec2-3-84-11-182.compute-1.amazonaws.com:4001/users/signIn",
     {
       method: "POST",
       headers: {
